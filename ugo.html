@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Girlfriend? 💖</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Pacifico&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <div class="floating-hearts" id="floatingHearts"></div>
+
+    <div class="container" id="questionScreen">
+        <div class="sticker-decoration">
+            <span class="sticker">💞</span>
+            <span class="sticker">💘</span>
+            <span class="sticker">🌸</span>
+            <span class="sticker">🐰</span>
+            <span class="sticker">🎀</span>
+        </div>
+
+        <h1 class="main-title">Will you be my girlfriend?</h1>
+        
+        <div class="gif-container">
+            <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcDhxZnZ5dGJ5dGJ5dGJ5dGJ5dGJ5dGJ5dGJ5dGJ5dGJ5dGJ5dGJ5dGJ5/26BRuo6sLetdllPAQ/giphy.gif" alt="Love hearts" class="cute-gif">
+        </div>
+
+        <div class="button-container">
+            <button class="yes-btn" id="yesBtn">
+                💖 Yes! 💖
+            </button>
+            <button class="no-btn" id="noBtn">
+                💔 No
+            </button>
+        </div>
+
+        <div class="sad-gif-container" id="sadGif" style="display: none;">
+            <img src="https://media.giphy.com/media/d2lcHJTG5Tscg/giphy.gif" alt="Sad heart" class="sad-gif">
+            <p class="sad-text">You can't say no 😘❤️</p>
+        </div>
+    </div>
+
+    
+    <div class="celebration-screen" id="celebrationScreen">
+        <div class="confetti" id="confetti"></div>
+        
+        <div class="celebration-content">
+            <h2 class="celebration-title">🎉 Congratulations UGOCHI! 🎉</h2>
+            <p class="celebration-message">
+                You have officially been awarded the<br>
+                <strong>Best Man in the World</strong><br>
+                as your boyfriend ❤️
+            </p>
+
+            <div class="certificate">
+                <div class="certificate-border">
+                    <div class="certificate-ribbon left-ribbon">🎀</div>
+                    <div class="certificate-ribbon right-ribbon">🎀</div>
+                    
+                    <h3 class="certificate-header">💝 Official Certificate 💝</h3>
+                    <div class="certificate-body">
+                        <p class="certificate-text">This certifies that</p>
+                        <p class="certificate-name">UGOCHI</p>
+                        <p class="certificate-text">has been awarded</p>
+                        <p class="certificate-award">The Best Man in the World</p>
+                        <p class="certificate-text">as her boyfriend</p>
+                        <div class="certificate-hearts">💕 💖 💕</div>
+                        <p class="certificate-date" id="certificateDate"></p>
+                    </div>
+                </div>
+            </div>
+
+            <button class="download-btn" id="downloadBtn">
+                📥 Download Certificate
+            </button>
+
+            <div class="celebration-gifs">
+                <img src="https://media.giphy.com/media/UO5elnTqo4vSg/giphy.gif" alt="Hugging bears" class="celebration-gif">
+                <img src="https://media.giphy.com/media/l0HlSz7l0vjVUvG4E/giphy.gif" alt="Dancing hearts" class="celebration-gif">
+            </div>
+        </div>
+
+        <div class="balloons" id="balloons"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
