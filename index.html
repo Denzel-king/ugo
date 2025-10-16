@@ -10,10 +10,116 @@
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Pacifico&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+    <!-- Added romantic background music audio element -->
+    <audio id="romanticMusic" loop>
+        <source src="./girl in red - we fell in love in october (Lyrics) [AmTMNntVmbQ].mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Floating hearts background -->
     <div class="floating-hearts" id="floatingHearts"></div>
 
-    <div class="container" id="questionScreen">
+    <!-- Welcome Screen -->
+    <div class="container" id="welcomeScreen">
+        <div class="sticker-decoration">
+            <span class="sticker">💞</span>
+            <span class="sticker">💘</span>
+            <span class="sticker">🌸</span>
+            <span class="sticker">🐰</span>
+            <span class="sticker">🎀</span>
+        </div>
+
+        <h1 class="main-title">Hey UGOCHI! 💖</h1>
+        
+        <!-- Replaced broken GIF with working Giphy link -->
+        <div class="gif-container">
+            <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHE3cWRxdmZ6aGN6ZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o6Zt6ML6BklcajjsA/giphy.gif" alt="Welcome hearts" class="cute-gif">
+        </div>
+
+        <p class="welcome-text">Let's play a fun little game! 🎮</p>
+        <p class="welcome-subtext">Answer a few quick questions 😊</p>
+
+        <button class="start-btn" id="startBtn">
+            ✨ Start ✨
+        </button>
+    </div>
+
+    <!-- Question 1 Screen -->
+    <div class="container question-container" id="question1Screen" style="display: none;">
+        <div class="sticker-decoration">
+            <span class="sticker">🌹</span>
+            <span class="sticker">💝</span>
+            <span class="sticker">✨</span>
+            <span class="sticker">🦋</span>
+            <span class="sticker">💫</span>
+        </div>
+
+        <h2 class="question-title">Question 1</h2>
+        <p class="question-text">🩷 What's my favorite person's name?</p>
+        
+        <!-- Replaced with relatable thinking GIF -->
+        <div class="gif-container">
+            <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHE3cWRxdmZ6aGN6ZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/a5viI92PAF89q/giphy.gif" alt="Thinking" class="cute-gif">
+        </div>
+
+        <div class="answer-container">
+            <button class="answer-btn wrong-answer">Amaka</button>
+            <button class="answer-btn" id="q1Answer">Ugochi 💕</button>
+            <button class="answer-btn wrong-answer">Blessing</button>
+        </div>
+    </div>
+
+    <!-- Question 2 Screen -->
+    <div class="container question-container" id="question2Screen" style="display: none;">
+        <div class="sticker-decoration">
+            <span class="sticker">🌟</span>
+            <span class="sticker">💗</span>
+            <span class="sticker">🎀</span>
+            <span class="sticker">🌺</span>
+            <span class="sticker">💖</span>
+        </div>
+
+        <h2 class="question-title">Question 2</h2>
+        <p class="question-text">💋 Who smiles the cutest?</p>
+        
+        <!-- Replaced with cute smiling GIF -->
+        <div class="gif-container">
+            <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHE3cWRxdmZ6aGN6ZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l0MYt5jPR6QX5pnqM/giphy.gif" alt="Cute smile" class="cute-gif">
+        </div>
+
+        <div class="answer-container">
+            <button class="answer-btn wrong-answer">You 😏</button>
+            <button class="answer-btn wrong-answer">Me 😎</button>
+            <button class="answer-btn" id="q2Answer">Ugochi 😍</button>
+        </div>
+    </div>
+
+    <!-- Question 3 Screen -->
+    <div class="container question-container" id="question3Screen" style="display: none;">
+        <div class="sticker-decoration">
+            <span class="sticker">💫</span>
+            <span class="sticker">💕</span>
+            <span class="sticker">🌸</span>
+            <span class="sticker">✨</span>
+            <span class="sticker">💘</span>
+        </div>
+
+        <h2 class="question-title">Question 3</h2>
+        <p class="question-text">💖 Who deserves all my love?</p>
+        
+        <!-- Replaced with heart eyes GIF -->
+        <div class="gif-container">
+            <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHE3cWRxdmZ6aGN6ZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xULW8MYvpNOfMXfDH2/giphy.gif" alt="Heart eyes" class="cute-gif">
+        </div>
+
+        <div class="answer-container">
+            <button class="answer-btn wrong-answer">Someone else</button>
+            <button class="answer-btn" id="q3Answer">Ugochi 💋</button>
+            <button class="answer-btn wrong-answer">No one</button>
+        </div>
+    </div>
+
+    <!-- Main Question Screen -->
+    <div class="container" id="questionScreen" style="display: none;">
         <div class="sticker-decoration">
             <span class="sticker">💞</span>
             <span class="sticker">💘</span>
@@ -24,8 +130,9 @@
 
         <h1 class="main-title">Will you be my girlfriend?</h1>
         
+        <!-- Replaced with romantic love hearts GIF -->
         <div class="gif-container">
-            <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcDhxZnZ5dGJ5dGJ5dGJ5dGJ5dGJ5dGJ5dGJ5dGJ5dGJ5dGJ5dGJ5dGJ5/26BRuo6sLetdllPAQ/giphy.gif" alt="Love hearts" class="cute-gif">
+            <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHE3cWRxdmZ6aGN6ZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/26BRuo6sLetdllPAQ/giphy.gif" alt="Love hearts" class="cute-gif">
         </div>
 
         <div class="button-container">
@@ -37,13 +144,14 @@
             </button>
         </div>
 
+        <!-- Replaced with sad crying heart GIF -->
         <div class="sad-gif-container" id="sadGif" style="display: none;">
-            <img src="https://media.giphy.com/media/d2lcHJTG5Tscg/giphy.gif" alt="Sad heart" class="sad-gif">
+            <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHE3cWRxdmZ6aGN6ZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/OPU6wzx8JrHna/giphy.gif" alt="Sad heart" class="sad-gif">
             <p class="sad-text">You can't say no 😘❤️</p>
         </div>
     </div>
 
-    
+    <!-- Celebration Screen -->
     <div class="celebration-screen" id="celebrationScreen">
         <div class="confetti" id="confetti"></div>
         
@@ -77,9 +185,10 @@
                 📥 Download Certificate
             </button>
 
+            <!-- Replaced with working celebration GIFs -->
             <div class="celebration-gifs">
-                <img src="https://media.giphy.com/media/UO5elnTqo4vSg/giphy.gif" alt="Hugging bears" class="celebration-gif">
-                <img src="https://media.giphy.com/media/l0HlSz7l0vjVUvG4E/giphy.gif" alt="Dancing hearts" class="celebration-gif">
+                <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHE3cWRxdmZ6aGN6ZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/UO5elnTqo4vSg/giphy.gif" alt="Hugging bears" class="celebration-gif">
+                <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHE3cWRxdmZ6aGN6ZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l0MYt5jPR6QX5pnqM/giphy.gif" alt="Dancing hearts" class="celebration-gif">
             </div>
         </div>
 

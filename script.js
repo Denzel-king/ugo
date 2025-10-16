@@ -14,6 +14,59 @@ function createFloatingHearts() {
   }
 }
 
+// Game state
+let currentScreen = "welcome"
+
+// Screen navigation
+function showScreen(screenId) {
+  // Hide all screens
+  document.getElementById("welcomeScreen").style.display = "none"
+  document.getElementById("question1Screen").style.display = "none"
+  document.getElementById("question2Screen").style.display = "none"
+  document.getElementById("question3Screen").style.display = "none"
+  document.getElementById("questionScreen").style.display = "none"
+  document.getElementById("celebrationScreen").style.display = "none"
+
+  // Show target screen
+  document.getElementById(screenId).style.display = "flex"
+  currentScreen = screenId
+}
+
+// Start button
+document.getElementById("startBtn").addEventListener("click", () => {
+  showScreen("question1Screen")
+})
+
+// Question 1 answer
+document.getElementById("q1Answer").addEventListener("click", () => {
+  showScreen("question2Screen")
+})
+
+// Question 2 answer
+document.getElementById("q2Answer").addEventListener("click", () => {
+  showScreen("question3Screen")
+})
+
+// Question 3 answer
+document.getElementById("q3Answer").addEventListener("click", () => {
+  const music = document.getElementById("romanticMusic")
+  music.volume = 0.8 // Set volume to 80% (loud but not distorted)
+
+  music.currentTime = 45
+
+  music.addEventListener("timeupdate", () => {
+    if (music.currentTime >= 90) {
+      music.currentTime = 45
+    }
+  })
+
+  music.play().catch((error) => {
+    console.log("Audio autoplay prevented. User interaction required.")
+  })
+
+  showScreen("questionScreen")
+})
+
 // No button behavior
 const noBtn = document.getElementById("noBtn")
 let noClickCount = 0
@@ -150,4 +203,5 @@ Date: ${document.getElementById("certificateDate").textContent}
 // Initialize floating hearts on page load
 window.addEventListener("load", () => {
   createFloatingHearts()
+  showScreen("welcomeScreen")
 })
